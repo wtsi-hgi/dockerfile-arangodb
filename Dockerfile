@@ -13,5 +13,9 @@ run	curl http://www.arangodb.org/repositories/arangodb/xUbuntu_12.04/Release.key
 
 run apt-get update && apt-get -y install arangodb
 
-cmd ["/usr/sbin/arangod", "-c", "/etc/arangodb/arangod.conf"]
+add . /docker
+
+workdir /docker
+# cmd ["/usr/sbin/arangod", "-c", "/etc/arangodb/arangod.conf"]
+cmd ["arangod", "--javascript.dev-app-path", "/docker/arangodb", "/var/lib/arangodb"]
 expose 8529
