@@ -13,6 +13,7 @@ run	curl http://www.arangodb.org/repositories/arangodb/xUbuntu_13.10/Release.key
 run apt-get update && apt-get -y install arangodb=2.0.0
 
 add . /docker
+run mkdir -p /docker/arangodb
 
 workdir /docker
 cmd ["arangod", "--javascript.dev-app-path", "/docker/arangodb", "/var/lib/arangodb"]
