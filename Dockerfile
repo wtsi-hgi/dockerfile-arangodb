@@ -8,9 +8,9 @@ run apt-get update && apt-get -y upgrade
 run apt-get -y install curl bzip2 less vim
 
 # arangodb
-run echo 'deb http://www.arangodb.org/repositories/arangodb2/xUbuntu_13.10/ /' >> /etc/apt/sources.list.d/arangodb.list
-run	curl http://www.arangodb.org/repositories/arangodb/xUbuntu_13.10/Release.key | apt-key add -
-run apt-get update && apt-get -y install arangodb=2.0.0
+run echo 'deb http://www.arangodb.org/repositories/arangodb2/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/arangodb.list
+run	curl http://www.arangodb.org/repositories/arangodb/xUbuntu_14.04/Release.key | apt-key add -
+run apt-get update && apt-get -y install arangodb=2.0.7
 
 add . /docker
 run mkdir -p /docker/arangodb
