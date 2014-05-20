@@ -1,6 +1,6 @@
 # docker-version 0.6
 
-from webwurst/ubuntu:saucy
+FROM ubuntu:14.04
 maintainer "Joshua C. Randall" <jcrandall@alum.mit.edu>
 run apt-get update && apt-get -y upgrade
 
